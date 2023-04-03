@@ -1,5 +1,6 @@
 package com.github.idelstak.eecc.ui;
 
+import com.github.idelstak.eecc.Simulation;
 import com.github.idelstak.eecc.model.ConfigurationSettings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
