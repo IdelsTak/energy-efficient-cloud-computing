@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane hgap="6.0" style="-fx-border-color: transparent transparent gray transparent;" vgap="6.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" prefWidth="200.0" />
+            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" text="Configuration Settings" GridPane.columnSpan="2147483647" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Number of Physical Servers" GridPane.rowIndex="1" />
+            <TextField fx:id="numPhysicalServersTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Number of VMs per Server" GridPane.rowIndex="2" />
+            <TextField fx:id="numVMsPerServerTextField" layoutX="197.0" layoutY="31.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Workload Type" GridPane.rowIndex="3" />
+            <ComboBox fx:id="workloadTypeComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Energy Management Policy" GridPane.rowIndex="4" />
+            <ComboBox fx:id="energyManagementPolicyComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startSimulation" text="Start Simulation" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+      </GridPane>
+      <GridPane hgap="6.0" layoutX="10.0" layoutY="58.0" style="-fx-border-color: transparent transparent gray transparent;" vgap="6.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" prefWidth="200.0" />
+            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" text="Real-Time Metrics" GridPane.columnSpan="2147483647" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Power Consumption" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Watts" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Workload" GridPane.rowIndex="2" />
+            <TextField layoutX="197.0" layoutY="31.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Requests per Second" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Number of Active VMs" GridPane.rowIndex="3" />
+            <TextField layoutX="197.0" layoutY="62.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" text="Performance Metrics Graph" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" />
+            <HBox maxWidth="1.7976931348623157E308" spacing="12.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="CPU Utilization" />
+                  <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Response Time" />
+                  <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Throughput" />
+                  <Button layoutX="119.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Refresh Graphs" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+      </GridPane>
+      <GridPane hgap="6.0" layoutX="10.0" layoutY="287.0" style="-fx-border-color: transparent transparent gray transparent;" vgap="6.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" prefWidth="200.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" text="Energy Consumption Metrics Graph" GridPane.columnSpan="2147483647" />
+            <HBox maxWidth="1.7976931348623157E308" spacing="12.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Power Usage" />
+                  <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Total Energy Consumed" />
+                  <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Energy Cost" />
+                  <Button layoutX="119.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Refresh Graphs" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+      </GridPane>
+      <GridPane hgap="6.0" layoutX="10.0" layoutY="287.0" vgap="6.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" prefWidth="200.0" />
+            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" text="Simulation Results" GridPane.columnSpan="2147483647" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Total Energy Consumed" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="kWh" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Cost of Energy Consumption" GridPane.rowIndex="2" />
+            <TextField layoutX="197.0" layoutY="31.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="\$" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Total Processing Time" GridPane.rowIndex="3" />
+            <TextField layoutX="197.0" layoutY="62.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label layoutX="397.0" layoutY="91.0" text="seconds" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label alignment="CENTER_RIGHT" layoutX="23.0" layoutY="128.0" maxWidth="1.7976931348623157E308" text="Other Relevant Data" GridPane.rowIndex="4" />
+            <TextField layoutX="229.0" layoutY="124.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Close Simulation" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>
